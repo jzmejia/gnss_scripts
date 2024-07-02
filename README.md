@@ -4,5 +4,5 @@ useful scripts for processing GNSS data, including data access, pre-processing, 
 
 ## file descriptions
 
-`unavco_download.sh ` for bulk downloading GNSS station data from UNAVCO's GAGE Facilit, requires [earthscope-cli](https://gitlab.com/earthscope/public/earthscope-cli#Getting_Started)
+`unavco_download.sh ` for bulk downloading GNSS station data from UNAVCO's GAGE Facility, requires [earthscope-cli](https://gitlab.com/earthscope/public/earthscope-cli#Getting_Started)
 
