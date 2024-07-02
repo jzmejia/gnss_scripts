@@ -5,7 +5,6 @@ end_doy=365
 stn="hel2"
 file_ext="o.Z"
 access_url="https://data.unavco.org/archive/gnss/rinex/obs/20"${gps_yr}
-dest_dir="/rinex"
 
 
 for i in `seq ${sta_doy} ${end_doy}`
@@ -22,6 +21,6 @@ do
   fi
 
   file_name=${stn}${gdoy}0.${gps_yr}${file_ext}
-  path=${access_url}/${i}/${file_name}
+  path=${access_url}/${gdoy}/${file_name}
   curl -L -O -f --url ${path} --header "authorization: Bearer $(es sso access --token)"
 done
