@@ -8,3 +8,4 @@ useful scripts for processing GNSS data, including data access, pre-processing, 
 
 `get_sopac_orbits.sh` bulk download SOPAC GPS orbits from Scripps Orbit and Permanent Array Center [SOPAC](http://garner.ucsd.edu)
 
+`comb3sp3.sh` combine three days of orbit files into a single file
