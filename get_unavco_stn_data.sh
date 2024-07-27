@@ -1,8 +1,10 @@
 #!/bin/bash
+# year (YY) and day of year range to download data for
 gps_yr=23
 sta_doy=259
 end_doy=365
-stn="hel2"
+# 4 char station name
+stn=hel2
 file_ext="o.Z"
 access_url="https://data.unavco.org/archive/gnss/rinex/obs/20"${gps_yr}
 
