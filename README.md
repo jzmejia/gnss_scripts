@@ -4,7 +4,9 @@ useful scripts for processing GNSS data, including data access, pre-processing, 
 
 ## file descriptions
 
-`unavco_download.sh ` for bulk downloading GNSS station data from UNAVCO's GAGE Facility, requires [earthscope-cli](https://gitlab.com/earthscope/public/earthscope-cli#Getting_Started)  
-`get_sopac_orbits.sh` bulk download SOPAC GPS orbits from Scripps Orbit and Permanent Array Center [SOPAC](http://garner.ucsd.edu)  
-`get_longsp3.sh` bulk download SOPAC orbits with new long naming convention
-`comb3sp3.sh` combine three days of orbit files into a single file
+|file name| description|
+|---------|------------|
+`unavco_download.sh ` | for bulk downloading GNSS station data from UNAVCO's GAGE Facility, requires [earthscope-cli](https://gitlab.com/earthscope/public/earthscope-cli#Getting_Started) | 
+`get_sopac_orbits.sh` |bulk download [SOPAC](http://garner.ucsd.edu)  GPS orbits from Scripps Orbit and Permanent Array Center|  
+`get_longsp3.sh`| bulk download SOPAC orbits with new long naming convention  |
+`comb3sp3.sh`| append daily orbit file with 12 hours from the previous and next day as a single file | 
