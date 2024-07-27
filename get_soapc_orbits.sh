@@ -45,3 +45,9 @@ done
 
 wget -i temp.txt
 rm temp.txt
+
+# unzip downloaded files
+for f in *.Z
+do
+    gunzip ${f}
+done
