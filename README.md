@@ -11,6 +11,7 @@ useful scripts for processing GNSS data, including data access, pre-processing, 
 `get_orbits_longfmt.sh`| bulk download SOPAC orbits with new long naming convention  |
 `combine_3d_orbits.sh`| append daily orbit file with 12 hours from the previous and next day as a single file | 
 `combine_3d_rinex.sh`| append rinex file with 12 hours of obs from the previous and next day as a single file | 
+`convertT02.sh` | convert trimble `.T02` files to rinex files with `teqc` and `runpkr00` |
 
 ## python analysis
 For data analysis tools see the Python module [gpstools](https://github.com/jzmejia/datatools).
