@@ -6,11 +6,13 @@ import numpy as np
 # from matplotlib.patches import Rectangle
 from pathlib import Path
 
-stn='hlm1'   #Station name
+stn='hlm1'   # 4 digit station name
 yy='23'
 stad=170 # day of year (doy) start
 endd=333 # doy end
 fout=stn+yy+'GEOD.txt' # output file name
+# reformat longitude to negative decimal for western hemisphere?
+reformat_lon_to_neg=True
 
 
 def loadfgeod(filename):
@@ -31,7 +33,7 @@ def loadfgeod(filename):
         tgeod[i,2]=ft[i][2] #sec
         tgeod[i,3]=ft[i][13] #fract doy
         tgeod[i,4]=ft[i][3] #lat
-        tgeod[i,5]=-1*(360-ft[i][4]) #lon
+        tgeod[i,5]=-1*(360-ft[i][4]) if reformat_lon_to_neg else ft[i][4] #lon
         tgeod[i,6]=ft[i][5] #height
         tgeod[i,7]=ft[i][6] #lat err
         tgeod[i,8]=ft[i][7] #lon err
