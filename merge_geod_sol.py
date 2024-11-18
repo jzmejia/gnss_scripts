@@ -6,10 +6,10 @@ import numpy as np
 # from matplotlib.patches import Rectangle
 from pathlib import Path
 
-stn='hlm1'   # 4 digit station name
+stn='stn1'   # 4 digit station name, will search for daily files in folder with this name
 yy='23'
-stad=170 # day of year (doy) start
-endd=333 # doy end
+stad=191 # day of year (doy) start
+endd=333 # doy end (day of year) 
 fout=stn+yy+'GEOD.txt' # output file name
 # reformat longitude to negative decimal for western hemisphere?
 reformat_lon_to_neg=True
