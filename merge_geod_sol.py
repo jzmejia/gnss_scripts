@@ -1,4 +1,4 @@
-# merge TRACK GEOD files 
+# merge all TRACK GEOD files iin current directory into a single csv file
 
 import numpy as np
 # import matplotlib.pyplot as plt
@@ -7,7 +7,7 @@ import numpy as np
 from pathlib import Path
 
 stn='stn1'   # 4 digit station name, will search for daily files in folder with this name
-yy='23'
+yy='23' #two digit year
 stad=191 # day of year (doy) start
 endd=333 # doy end (day of year) 
 fout=stn+yy+'GEOD.txt' # output file name
