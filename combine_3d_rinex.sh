@@ -3,8 +3,22 @@
 # append rinex file with 12 hours of data from days before and after
 # to eliminate edge effects during processing
 # outputs a file of the same name in a new directory
+#
+# Requirements
+# ------------
+#    teqc
+#    (doy no longer required)
+#
+# Update 11/21/2025 J.Z. Mejia
+#    current set up requries both teqc and doy commands to be executed
+#    from this script. Due to compatability issues and those wanting the
+#    abiltiy to run teqc and runpkr00 from a docker environment this yields
+#    complications due to the lack of the doy command. 
+# IMPORTANT: Updated version of this script replaces the doy command so only 
+#    teqc is required. 
 
 gps_yr=24
+year=2024
 # first and last day of year to loop through
 sta_doy=182
 end_doy=200
@@ -95,8 +109,15 @@ do
       rm -irf ${path_3drnx}/header
       rm -irf ${path_3drnx}/*.bak
       rm -irf ${path_3drnx}/tmpn1
-      gps_mt=`doy ${gps_yr} ${doy1}| (sed -n "1,1p"| awk '{print(substr($2,6,2))}')`
-      gps_dy=`doy ${gps_yr} ${doy1}| (sed -n "1,1p"| awk '{print(substr($2,9,2))}')`
+      
+      # use bash to determine month/date format rather than doy
+      date_str=$(date -d "${year}-01-01 +$((${doy1} - 1)) days" +"%m %d")
+      gps_mt=$(echo "$date_str" | awk '{print $1}')
+      gps_dy=$(echo "$date_str" | awk '{print $2}')
+      
+      # gps_mt=`doy ${gps_yr} ${doy1}| (sed -n "1,1p"| awk '{print(substr($2,6,2))}')`
+      # gps_dy=`doy ${gps_yr} ${doy1}| (sed -n "1,1p"| awk '{print(substr($2,9,2))}')`
+      
       teqc -st ${gps_yr}:${gps_mt}:${gps_dy}:12:00:00 +dh 48 ${path_3drnx}/tmpn2 >${path_3drnx}/tmpn3
       teqc -O.obs C1C2L1L2P2 ${path_3drnx}/tmpn3 > ${path_3drnx}/${f_stn}
       rm -irf ${path_3drnx}/tmpn2
