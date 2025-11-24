@@ -2,6 +2,9 @@
 useful scripts for processing GNSS data, including data access, pre-processing, post-processing, and accessing other required data (e.g., orbits).  
 
 
+Scripts used for full pre-processing and post-processing of GNSS data files for high-precision position determination using MIT's GAMIT GLOBK software. This includes converting files from propertary formats using teqc and runpkr00, file naming conventions, manipulation, splicing etc within shell scripts. Downloading GNSS data from EARTHSCOPE/UNAVCO online data archives, and downloading orbit files for analysis. I splice data by appending each day of data with 0.5 days from the preceeding and following days that are cut off after position determination, this helps to reduce noise at the edges (midnight) of each days data collection. 
+
+
 ## file descriptions
 
 |file name| description|
