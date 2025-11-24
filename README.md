@@ -20,9 +20,10 @@ Scripts used for full pre-processing and post-processing of GNSS data files for 
 `merge_daily_sol.py` | merge daily NEU (northing/easting) solutions into a single `.csv` file with all solutions for a given year |
 
 ## Requirements
-teqc  *teqc and runpkr00 can be run from a docker enviornment [mrsiegfried/teqc-runpkr00](https://github.com/mrsiegfried/teqc-runpkr000)*  
+teqc  
 runpkr00  
 gamit/globk  
+*teqc and runpkr00 can be run from a docker enviornment [mrsiegfried/teqc-runpkr00](https://github.com/mrsiegfried/teqc-runpkr000)*  
 
 
 
