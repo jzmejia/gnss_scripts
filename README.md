@@ -19,5 +19,12 @@ Scripts used for full pre-processing and post-processing of GNSS data files for 
 `merge_geod_sol.py` | merge daily GEOD (lat/lon) solutions into a single `.csv` file with all solutions for a given year|
 `merge_daily_sol.py` | merge daily NEU (northing/easting) solutions into a single `.csv` file with all solutions for a given year |
 
+## Requirements
+teqc  *teqc and runpkr00 can be run from a docker enviornment [mrsiegfried/teqc-runpkr00](https://github.com/mrsiegfried/teqc-runpkr000)*  
+runpkr00  
+gamit/globk  
+
+
+
 ## python analysis
 For data analysis tools see the Python module [gpstools](https://github.com/jzmejia/datatools).
