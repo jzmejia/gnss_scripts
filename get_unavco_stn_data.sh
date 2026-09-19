@@ -8,13 +8,14 @@
 
 # year (YY) and day of year range to download data for
 gps_yr=23
+gps_yyyy=2023
 sta_doy=259
 end_doy=365
 # obs_freq=10 # in days
-# 4 char station name
+# 4 char unavco station name
 stn=hel2
 file_ext="o.Z"
-access_url="https://data.unavco.org/archive/gnss/rinex/obs/20"${gps_yr}
+access_url="https://data.earthscope.org/archive/gnss/rinex/obs/"${gps_yyyy}
 
 # use commented out code below if you want an interval between dates
 # for i in `seq ${sta_doy} ${obs_freq} ${end_doy}`
